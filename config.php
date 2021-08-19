@@ -2,7 +2,7 @@
 
 //$mysql = new mysqli('localhost', 'root', '', );
 //$mysql->set_charset('utf8');
-$pdo = new PDO('sqlite:data_source');
+$pdo = new \PDO('sqlite:data_source');
 
 if ($pdo == TRUE) {
     echo "Banco conectado";

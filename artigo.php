@@ -1,3 +1,11 @@
+<?php
+
+require 'config.php';
+include_once 'src/Artigo.php';
+$artigoQuery = new Artigo($pdo);
+$artigo = $artigoQuery->getArtigoById($_GET['id']);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,10 +18,10 @@
 <body>
 <div id="container">
     <h1>
-        Título
+        <?php echo $artigo[0]['titulo']; ?>
     </h1>
     <p>
-        Conteudo
+        <?php echo $artigo[0]['conteudo']; ?>
     </p>
     <div>
         <a class="botao botao-block" href="/index.php">Voltar</a>

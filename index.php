@@ -3,7 +3,7 @@
 require 'config.php';
 include_once 'src/Artigo.php';
 $listaDeArtigos = new Artigo($pdo);
-$artigos = $listaDeArtigos->exibirTodos();
+$artigos = $listaDeArtigos->getTodosArtigos();
 ?>
 
 <!DOCTYPE html>
